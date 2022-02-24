@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from .models import Wallet
 
-class WalletSerializer(serializers.HyperlinkedModelSerializer):
+class WalletSerializer(serializers.ModelSerializer):
     class Meta:
         model = Wallet
-        fields = ('raddress')
+        fields = ('__all__')
