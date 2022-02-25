@@ -17,6 +17,7 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
+    intentional fuck up goes here to test our action
 
 if __name__ == '__main__':
     main()
