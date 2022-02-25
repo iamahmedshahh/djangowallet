@@ -1,0 +1,21 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Create Crud functions
+
+on:
+  push:
+
+jobs:
+   super-lint:   
+      name: Create CRUD functions
+      runs-on: ubuntu-latest
+    steps:
+      - name: Create CRUD functions
+        uses: actions/checkout@v2
+
+      - name: Run CRUD functions
+        uses: github/super-linter@v3
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
