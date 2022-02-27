@@ -11,3 +11,14 @@ def getData(request):
     serializer = WalletSerializer(queryset, many=True, context={'request': request})
     return Response(serializer.data)
 
+@api_view(['GET'])
+def getSingleData(request,pk):
+    queryset = Wallet.objects.all(id=pk)
+    serializer = WalletSerializer(queryset, many=False)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def postData(request):
+    serializer = WalletSerializer(data = request.data)
+    if serializer.is_valid():
+        serializer.save()
