@@ -3,6 +3,7 @@ from rest_framework.decorators import api_view
 from .serializers import WalletSerializer
 from .models import Wallet
 
+
 @api_view(['GET'])
 def getData(request):
     queryset = Wallet.objects.all()
