@@ -19,6 +19,8 @@ def getSingleData(request,pk):
 
 @api_view(['POST'])
 def postData(request):
-    serializer = WalletSerializer(data = request.data)
+    serializer = WalletSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
+        return Response(serializer.data)
+    return Response(serializer.errors)
