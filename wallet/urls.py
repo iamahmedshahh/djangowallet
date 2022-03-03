@@ -2,7 +2,8 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
-    path('',views.getData),
+    path('', views.getUrls),
+    path('wallet/',views.getData),
     path('item/<str:pk>/',views.getSingleData, name="item"),
     path('create/',views.postData, name="create"),
     path('update/<str:pk>/',views.updateData, name="update"),

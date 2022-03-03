@@ -4,6 +4,18 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
 @api_view(['GET'])
+def getUrls(request):
+    api_urls = {
+        'Wallets': '/wallet',
+        'items': 'item/<str:pk>/',
+        'create': '/create',
+        'Update': '/update/pk',
+        'Delete': 'delete/<str:pk>/'
+    }
+  
+    return Response(api_urls)
+
+@api_view(['GET'])
 def getData(request):
     queryset = Wallet.objects.all()
     serializer = WalletSerializer(queryset,many=True,context={'request': request})
