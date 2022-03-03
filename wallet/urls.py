@@ -8,3 +8,4 @@ urlpatterns = [
     path('update/<str:pk>/',views.updateData, name="update"),
     path('delete/<str:pk>/',views.deleteData, name="delete"),
 ]
+intentiona error
