@@ -6,8 +6,8 @@ from rest_framework.decorators import api_view
 @api_view(['GET'])
 def getUrls(request):
     api_urls = {
-        'Wallets': '/wallet',
-        'items' : 'item/<str:pk>/',
+        'wallets': '/wallet',
+        'wallet': 'wallet/<str:pk>/',
         'create': '/create',
         'Update': '/update/pk',
         'Delete': 'delete/<str:pk>/',
