@@ -26,7 +26,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-# Base Level Settings #
+# Base Level Project Settings #
 
 Go to your settings.py file in the Root directory of djangowallet and add the following under ```Installed_APPS = ``` paranthesis
 
@@ -63,7 +63,7 @@ We can always Add multiple api's in our root django project, so we have to navig
 We have to navigate our BASE project to work with the URLs we will create in our API to do this look for ```djangowallet/urls.py```
 
 
-# Navigating our API URLS to Project URLS with djangowallet/URLS.PY #
+# Navigating our API URLS to Project URLS from djangowallet/URLS.PY #
 
 ```
 BEFORE
@@ -83,7 +83,7 @@ urlpatterns = [
 We have added another PATH where the project will look for the URLS in our APP/API URLs. Note, we have a urls.py file in our API folder as well. We are all set and done now we can work with our API
 
 
-# WORKING WITH THE API #
+# WORKING WITH THE API Directory #
 
 This wallet api has a model.py file and inside that our model class name wallet the same name as our API (Not Obligatory). We have a single field called ```raddress```. 
 
