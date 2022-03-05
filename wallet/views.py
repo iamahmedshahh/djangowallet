@@ -7,10 +7,10 @@ from rest_framework.decorators import api_view
 def getUrls(request):
     api_urls = {
         'Wallets': '/wallet',
-        'items': 'item/<str:pk>/',
+        'items' : 'item/<str:pk>/',
         'create': '/create',
         'Update': '/update/pk',
-        'Delete': 'delete/<str:pk>/'
+        'Delete': 'delete/<str:pk>/',
     }
   
     return Response(api_urls)
