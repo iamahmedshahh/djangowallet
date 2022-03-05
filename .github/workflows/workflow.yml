@@ -9,6 +9,11 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
+        with:
+            fetch-depth: 0
+        
+      - name: Lint Code Base
+        uses: github/super-linter@v4
 
       # Setup Python (faster than using Python container)
       - name: Setup Python
@@ -33,12 +38,4 @@ jobs:
         
       - name: Run test suite
         run: pipenv run test -v
-        
-      - name: Checkout Code
-        uses: actions/checkout@v2
-        with:
-          # Full git history is needed to get a proper list of changed files within `super-linter`
-          fetch-depth: 0
-
-      - name: Lint Code Base
-        uses: github/super-linter@v4
+     
