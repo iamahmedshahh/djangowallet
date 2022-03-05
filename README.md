@@ -1,5 +1,7 @@
 # djangowallet
 
+First of All credits to https://github.com/GuillaumeFalourd For Helping out with the PyTest Action
+
 This is a Django REST API example with wallets as a use-case. 
 I have created a Wallet API inside the djangowallet/ project.
 Start by creating a new Django Project from the Command.
