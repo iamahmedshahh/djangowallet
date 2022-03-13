@@ -8,7 +8,11 @@ I have created a Wallet API inside the djangowallet/ project.
 # Install Django globally 
 
 ```
-$ python -m pip install Django
+$ python install Django
+
+or 
+
+$ pip install Django
 
 ```
 
