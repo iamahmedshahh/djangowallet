@@ -4,13 +4,33 @@ First of All credits to https://github.com/GuillaumeFalourd For Helping out with
 
 This is a Django REST API example with wallets as a use-case. 
 I have created a Wallet API inside the djangowallet/ project.
-Start by creating a new Django Project from the Command.
+
+# Install Django globally 
+
+```
+$ python -m pip install Django
+
+```
+
+# Install Django Rest framework globally
+
+```
+pip install djangorestframework
+
+OR
+
+python install djangorestframework
+
+```
+
+# Start by creating a new Django Project from the Command.
 
 
 ```
 django-admin createproject djangowallet 
 
-#instead of python you can use py or pip, anything that works for you
+## instead of python you can use py or pip, anything that works for you
+
 ```
 
 This command created a project called djangowallet. To create our Actual REST API we will run another command within the root of our project
